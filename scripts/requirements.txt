@@ -1,0 +1,27 @@
+# RAG Pipeline Dependencies
+
+# Google Gemini SDK
+google-genai>=1.0.0
+
+# Qdrant Vector Database
+qdrant-client>=1.12.0
+
+# FastAPI for the backend
+fastapi>=0.115.0
+uvicorn>=0.32.0
+email-validator>=2.0.0
+
+# PostgreSQL database
+psycopg2-binary>=2.9.9
+
+# Markdown processing
+markdown>=3.7
+python-frontmatter>=1.1.0
+
+# Utilities
+python-dotenv>=1.0.1
+numpy>=1.26.0
+httpx>=0.28.0
+
+# CORS for frontend
+starlette>=0.41.0

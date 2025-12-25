@@ -1,0 +1,89 @@
+{
+  "module": {
+    "id": 2,
+    "title": "The Digital Twin (Simulation)",
+    "description": "Master robotics simulation with Gazebo and Unity. Learn to create virtual worlds, simulate physics, and test robots without breaking real hardware.",
+    "estimatedHours": 3,
+    "difficulty": "intermediate",
+    "prerequisites": ["Module 1 completion", "Basic 3D concepts", "ROS 2 fundamentals"]
+  },
+  "sections": [
+    {
+      "id": "simulation-introduction",
+      "file": "01-introduction.md",
+      "title": "Why Simulate?",
+      "chunkingHints": {
+        "primarySections": ["The Cost of Reality", "Sim-to-Real Gap", "When to Simulate", "Simulation Options"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"]
+      },
+      "keyTopics": ["simulation benefits", "sim-to-real", "digital twin", "cost savings"]
+    },
+    {
+      "id": "simulation-gazebo-physics",
+      "file": "02-gazebo-physics.md",
+      "title": "Physics Simulation with Gazebo",
+      "chunkingHints": {
+        "primarySections": ["Meet Gazebo", "SDF Format", "World Building", "Physics Engines", "ROS 2 Integration"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Gazebo", "SDF", "physics simulation", "world files", "ros_gz_bridge"]
+    },
+    {
+      "id": "simulation-unity-rendering",
+      "file": "03-unity-rendering.md",
+      "title": "High-Fidelity Simulation with Unity",
+      "chunkingHints": {
+        "primarySections": ["Why Unity", "ROS-TCP-Connector", "Creating Environments", "URDF Importer", "Perception"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Unity", "photorealistic", "ROS-TCP-Connector", "synthetic data", "perception testing"]
+    },
+    {
+      "id": "simulation-sensors",
+      "file": "04-sensors-simulation.md",
+      "title": "Simulating Sensors",
+      "chunkingHints": {
+        "primarySections": ["Why Sensor Simulation", "LiDAR", "Cameras", "Depth Sensors", "IMU", "Noise Models"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["LiDAR simulation", "camera simulation", "depth sensors", "IMU", "sensor noise"]
+    },
+    {
+      "id": "simulation-capstone",
+      "file": "05-capstone.md",
+      "title": "Module 2 Capstone",
+      "chunkingHints": {
+        "primarySections": ["Project Overview", "World Creation", "Robot Integration", "Sensor Setup", "Testing"],
+        "minChunkSize": 400,
+        "maxChunkSize": 600,
+        "splitOn": ["##"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["complete simulation", "test environment", "obstacle course", "sensor verification"]
+    }
+  ],
+  "ragMetadata": {
+    "embeddingPriority": "high",
+    "contextWindow": "module-2-simulation",
+    "relatedModules": [1, 3],
+    "commonQueries": [
+      "How to set up Gazebo?",
+      "What is the difference between Gazebo and Unity?",
+      "How to simulate LiDAR?",
+      "How to create a Gazebo world?",
+      "What is sim-to-real gap?",
+      "How to connect Unity to ROS 2?"
+    ]
+  }
+}

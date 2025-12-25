@@ -1,0 +1,88 @@
+{
+  "module": {
+    "id": 4,
+    "title": "Vision-Language-Action (VLA)",
+    "description": "Master the cutting edge of Physical AI. Learn to integrate LLMs, speech recognition, and cognitive planning to create truly intelligent humanoid robots.",
+    "estimatedHours": 4,
+    "difficulty": "advanced",
+    "prerequisites": ["Module 1-3 completion", "LLM API access", "Python AI/ML libraries"]
+  },
+  "sections": [
+    {
+      "id": "vla-introduction",
+      "file": "01-introduction.md",
+      "title": "Vision-Language-Action Introduction",
+      "chunkingHints": {
+        "primarySections": ["The Missing Piece", "What is VLA", "Architecture Overview", "Current State of Art"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"]
+      },
+      "keyTopics": ["VLA", "Vision-Language-Action", "cognitive robotics", "embodied AI"]
+    },
+    {
+      "id": "vla-voice-to-action",
+      "file": "02-voice-to-action.md",
+      "title": "Voice to Action: Speech Recognition",
+      "chunkingHints": {
+        "primarySections": ["Why Voice", "OpenAI Whisper", "Audio Pipeline", "ROS 2 Integration", "Command Parsing"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Whisper", "speech recognition", "voice commands", "audio processing", "NLU"]
+    },
+    {
+      "id": "vla-cognitive-planning",
+      "file": "03-cognitive-planning.md",
+      "title": "Cognitive Planning with LLMs",
+      "chunkingHints": {
+        "primarySections": ["Decomposition Problem", "LLM as Planner", "LangChain Integration", "Prompt Engineering", "Safety Constraints"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["LLM", "task planning", "LangChain", "prompt engineering", "cognitive layer"]
+    },
+    {
+      "id": "vla-capstone",
+      "file": "04-capstone-project.md",
+      "title": "Final Capstone: The Autonomous Humanoid",
+      "chunkingHints": {
+        "primarySections": ["Project Overview", "System Architecture", "Integration", "Voice Interface", "Cognitive Layer", "Testing"],
+        "minChunkSize": 400,
+        "maxChunkSize": 600,
+        "splitOn": ["##"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["final project", "integration", "autonomous humanoid", "VLA system"]
+    },
+    {
+      "id": "vla-whats-next",
+      "file": "05-whats-next.md",
+      "title": "What's Next: The Future of Physical AI",
+      "chunkingHints": {
+        "primarySections": ["Cambrian Explosion", "Foundation Models", "Humanoid Companies", "Career Paths", "Getting Involved"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"]
+      },
+      "keyTopics": ["future of robotics", "foundation models", "career", "research", "industry trends"]
+    }
+  ],
+  "ragMetadata": {
+    "embeddingPriority": "highest",
+    "contextWindow": "module-4-vla",
+    "relatedModules": [1, 2, 3],
+    "commonQueries": [
+      "What is VLA?",
+      "How to use Whisper for robots?",
+      "How to integrate LLMs with robots?",
+      "What is cognitive planning?",
+      "How to build an autonomous humanoid?",
+      "What is the future of Physical AI?"
+    ]
+  }
+}

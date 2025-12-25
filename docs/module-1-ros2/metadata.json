@@ -1,0 +1,89 @@
+{
+  "module": {
+    "id": 1,
+    "title": "The Robotic Nervous System (ROS 2)",
+    "description": "Master the Robot Operating System 2 - the middleware that powers modern robots. Learn nodes, topics, services, and how to build robot software in Python.",
+    "estimatedHours": 3,
+    "difficulty": "beginner-intermediate",
+    "prerequisites": ["Python basics", "Linux command line", "Basic programming concepts"]
+  },
+  "sections": [
+    {
+      "id": "ros2-introduction",
+      "file": "01-introduction.md",
+      "title": "Why ROS 2? (A Love-Hate Story)",
+      "chunkingHints": {
+        "primarySections": ["The Honest Truth About Robot Software", "ROS vs ROS 2", "Core Concepts Overview"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"]
+      },
+      "keyTopics": ["ROS 2 overview", "middleware concept", "DDS", "why ROS 2 exists"]
+    },
+    {
+      "id": "ros2-nodes-topics-services",
+      "file": "02-nodes-topics-services.md",
+      "title": "Nodes, Topics, and Services",
+      "chunkingHints": {
+        "primarySections": ["The Mental Model", "Nodes", "Topics", "Services", "Parameters"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["nodes", "topics", "publishers", "subscribers", "services", "request-response"]
+    },
+    {
+      "id": "ros2-python-rclpy",
+      "file": "03-python-rclpy.md",
+      "title": "Python Agents with rclpy",
+      "chunkingHints": {
+        "primarySections": ["Why Python", "Creating Nodes", "Publishers and Subscribers", "Services", "Executors"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["rclpy", "Python ROS 2", "callbacks", "executors", "async patterns"]
+    },
+    {
+      "id": "ros2-urdf-humanoids",
+      "file": "04-urdf-humanoids.md",
+      "title": "URDF for Humanoids",
+      "chunkingHints": {
+        "primarySections": ["What is URDF", "Links and Joints", "Visual and Collision", "Xacro", "Humanoid Structure"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["URDF", "links", "joints", "robot description", "Xacro", "humanoid model"]
+    },
+    {
+      "id": "ros2-capstone",
+      "file": "05-capstone.md",
+      "title": "Module 1 Capstone",
+      "chunkingHints": {
+        "primarySections": ["Project Overview", "URDF Creation", "Python Node", "Launch Files", "Testing"],
+        "minChunkSize": 400,
+        "maxChunkSize": 600,
+        "splitOn": ["##"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["complete project", "differential drive", "teleop", "launch files"]
+    }
+  ],
+  "ragMetadata": {
+    "embeddingPriority": "high",
+    "contextWindow": "module-1-ros2",
+    "relatedModules": [2, 3],
+    "commonQueries": [
+      "What is ROS 2?",
+      "How do nodes communicate?",
+      "What is the difference between topics and services?",
+      "How to create a publisher in Python?",
+      "What is URDF?",
+      "How to describe a humanoid robot?"
+    ]
+  }
+}

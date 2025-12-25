@@ -1,0 +1,117 @@
+/* TL;DR Box Component Styles */
+.tldrBox {
+  margin: var(--space-8) 0;
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, 
+    rgba(37, 99, 235, 0.08) 0%, 
+    rgba(168, 85, 247, 0.08) 50%,
+    rgba(6, 182, 212, 0.08) 100%
+  );
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.tldrBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, 
+    var(--ifm-color-primary) 0%, 
+    #A855F7 50%, 
+    #06B6D4 100%
+  );
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.title {
+  font-weight: 800;
+  font-size: 1.125rem;
+  letter-spacing: -0.02em;
+  background: linear-gradient(135deg, 
+    var(--ifm-color-primary) 0%, 
+    #A855F7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.badge {
+  margin-left: auto;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--ifm-color-primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-primary);
+  font-weight: 500;
+}
+
+.content p:last-child {
+  margin-bottom: 0;
+}
+
+.content ul,
+.content ol {
+  margin: var(--space-2) 0;
+  padding-left: var(--space-6);
+}
+
+.content li {
+  margin-bottom: var(--space-1);
+}
+
+.content code {
+  background: rgba(37, 99, 235, 0.1);
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius-sm);
+  font-size: 0.9em;
+}
+
+/* Dark Mode */
+[data-theme='dark'] .tldrBox {
+  background: linear-gradient(135deg, 
+    rgba(59, 130, 246, 0.1) 0%, 
+    rgba(168, 85, 247, 0.1) 50%,
+    rgba(6, 182, 212, 0.1) 100%
+  );
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme='dark'] .badge {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+[data-theme='dark'] .content code {
+  background: rgba(59, 130, 246, 0.15);
+}

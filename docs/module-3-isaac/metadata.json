@@ -1,0 +1,89 @@
+{
+  "module": {
+    "id": 3,
+    "title": "The AI-Robot Brain (NVIDIA Isaac)",
+    "description": "Master NVIDIA Isaac for GPU-accelerated robot AI. Learn Isaac Sim, Isaac ROS, and Nav2 for autonomous humanoid navigation.",
+    "estimatedHours": 4,
+    "difficulty": "advanced",
+    "prerequisites": ["Module 1-2 completion", "NVIDIA GPU", "CUDA basics", "Docker"]
+  },
+  "sections": [
+    {
+      "id": "isaac-introduction",
+      "file": "01-introduction.md",
+      "title": "NVIDIA Isaac Overview",
+      "chunkingHints": {
+        "primarySections": ["What is Isaac", "Isaac Ecosystem", "Hardware Requirements", "Why GPU"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"]
+      },
+      "keyTopics": ["NVIDIA Isaac", "GPU robotics", "Omniverse", "ecosystem overview"]
+    },
+    {
+      "id": "isaac-sim",
+      "file": "02-isaac-sim.md",
+      "title": "Isaac Sim: Photorealistic Simulation",
+      "chunkingHints": {
+        "primarySections": ["Interface", "USD Format", "Environment Creation", "Robot Import", "Synthetic Data", "Replicator"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Isaac Sim", "USD", "Omniverse", "Replicator", "synthetic data generation"]
+    },
+    {
+      "id": "isaac-ros",
+      "file": "03-isaac-ros.md",
+      "title": "Isaac ROS: GPU-Accelerated Perception",
+      "chunkingHints": {
+        "primarySections": ["What is Isaac ROS", "NITROS", "Visual SLAM", "NVBlox", "Object Detection", "Deployment"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Isaac ROS", "VSLAM", "NVBlox", "NITROS", "GPU acceleration", "Jetson"]
+    },
+    {
+      "id": "isaac-nav2-humanoid",
+      "file": "04-nav2-humanoid.md",
+      "title": "Nav2 for Humanoid Navigation",
+      "chunkingHints": {
+        "primarySections": ["Nav2 Overview", "Path Planning", "Controllers", "Humanoid Adaptation", "Locomotion Interface"],
+        "minChunkSize": 300,
+        "maxChunkSize": 500,
+        "splitOn": ["##", "###"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["Nav2", "path planning", "humanoid navigation", "bipedal", "locomotion"]
+    },
+    {
+      "id": "isaac-capstone",
+      "file": "05-capstone.md",
+      "title": "Module 3 Capstone",
+      "chunkingHints": {
+        "primarySections": ["Project Overview", "Isaac Sim Setup", "Isaac ROS Integration", "Navigation Stack", "Testing"],
+        "minChunkSize": 400,
+        "maxChunkSize": 600,
+        "splitOn": ["##"],
+        "keepCodeBlocksIntact": true
+      },
+      "keyTopics": ["autonomous navigation", "integrated system", "humanoid robot", "end-to-end"]
+    }
+  ],
+  "ragMetadata": {
+    "embeddingPriority": "high",
+    "contextWindow": "module-3-isaac",
+    "relatedModules": [2, 4],
+    "commonQueries": [
+      "What is Isaac Sim?",
+      "How to use Isaac ROS?",
+      "What is Visual SLAM?",
+      "How to set up Nav2 for humanoids?",
+      "What is NVBlox?",
+      "How to generate synthetic data?"
+    ]
+  }
+}

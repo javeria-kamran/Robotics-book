@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.signInBtn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--ifm-color-primary);
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 150ms;
+}
+
+.signInBtn:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+  text-decoration: none;
+}
+
+.signUpBtn {
+  padding: 0.4rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: white;
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 150ms;
+}
+
+.signUpBtn:hover {
+  background: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  text-decoration: none;
+  color: white;
+}
+
+.userBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-800);
+  background: var(--ifm-color-emphasis-100);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 150ms;
+}
+
+.userBtn:hover {
+  background: var(--ifm-color-emphasis-200);
+  border-color: var(--ifm-color-emphasis-400);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+}
+
+.userName {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 220px;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 101;
+  overflow: hidden;
+}
+
+.userInfo {
+  padding: 0.75rem 1rem;
+}
+
+.userEmail {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.userLevel {
+  font-size: 0.75rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+  text-transform: capitalize;
+}
+
+.divider {
+  height: 1px;
+  background: var(--ifm-color-emphasis-200);
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--ifm-color-emphasis-700);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background 150ms;
+  text-align: left;
+}
+
+.menuItem:hover {
+  background: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-emphasis-900);
+}
