@@ -29,7 +29,7 @@
 }
 
 .logo:hover {
-  color: #3b82f6;
+  color: #FACC15;
 }
 
 .authHeader h1 {
@@ -68,8 +68,8 @@
 }
 
 .progressStep[data-active="true"] {
-  background: #3b82f6;
-  color: #fff;
+  background: #FACC15;
+  color: #000;
 }
 
 .progressLine {
@@ -80,7 +80,7 @@
 }
 
 .progressLine[data-active="true"] {
-  background: #3b82f6;
+  background: #FACC15;
 }
 
 .stepContent h2 {
@@ -114,7 +114,7 @@
 
 .inputGroup input:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: #FACC15;
 }
 
 .inputGroup input::placeholder {
@@ -176,8 +176,8 @@
 }
 
 .optionCard[data-selected="true"] {
-  border-color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
+  border-color: #FACC15;
+  background: rgba(250, 204, 21, 0.1);
 }
 
 .optionCard strong {
@@ -196,8 +196,8 @@
 .primaryBtn {
   width: 100%;
   padding: 0.875rem 1.5rem;
-  background: #3b82f6;
-  color: #fff;
+  background: #FACC15;
+  color: #000;
   font-size: 0.9375rem;
   font-weight: 600;
   border: none;
@@ -206,7 +206,7 @@
 }
 
 .primaryBtn:hover:not(:disabled) {
-  background: #2563eb;
+  background: #EAB308;
 }
 
 .primaryBtn:disabled {
@@ -263,7 +263,7 @@
 }
 
 .authFooter a {
-  color: #3b82f6;
+  color: #FACC15;
   text-decoration: none;
   font-weight: 500;
 }

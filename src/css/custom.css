@@ -21,23 +21,23 @@
   --color-text-muted: #A3A3A3;
   --color-text-inverse: #FFFFFF;
   
-  --color-accent-primary: #2563EB;
-  --color-accent-secondary: #3B82F6;
-  --color-accent-hover: #1D4ED8;
-  --color-accent-light: #DBEAFE;
+  --color-accent-primary: #EAB308;
+  --color-accent-secondary: #FACC15;
+  --color-accent-hover: #CA8A04;
+  --color-accent-light: #FEF08A;
   
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #EF4444;
   
   /* Infima overrides */
-  --ifm-color-primary: #2563EB;
-  --ifm-color-primary-dark: #1D4ED8;
-  --ifm-color-primary-darker: #1E40AF;
-  --ifm-color-primary-darkest: #1E3A8A;
-  --ifm-color-primary-light: #3B82F6;
-  --ifm-color-primary-lighter: #60A5FA;
-  --ifm-color-primary-lightest: #93C5FD;
+  --ifm-color-primary: #EAB308;
+  --ifm-color-primary-dark: #CA8A04;
+  --ifm-color-primary-darker: #A16207;
+  --ifm-color-primary-darkest: #78350F;
+  --ifm-color-primary-light: #FACC15;
+  --ifm-color-primary-lighter: #FBBF24;
+  --ifm-color-primary-lightest: #FCD34D;
   
   --ifm-background-color: var(--color-background);
   --ifm-background-surface-color: var(--color-surface);
@@ -56,7 +56,7 @@
   --ifm-footer-color: #A3A3A3;
   --ifm-footer-link-color: #FAFAFA;
   
-  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(234, 179, 8, 0.1);
   
   /* Spacing */
   --space-1: 0.25rem;
@@ -103,22 +103,22 @@
   --color-text-muted: #737373;
   --color-text-inverse: #0A0A0A;
   
-  --color-accent-light: rgba(37, 99, 235, 0.2);
+  --color-accent-light: rgba(234, 179, 8, 0.2);
   
-  --ifm-color-primary: #3B82F6;
-  --ifm-color-primary-dark: #2563EB;
-  --ifm-color-primary-darker: #1D4ED8;
-  --ifm-color-primary-darkest: #1E40AF;
-  --ifm-color-primary-light: #60A5FA;
-  --ifm-color-primary-lighter: #93C5FD;
-  --ifm-color-primary-lightest: #BFDBFE;
+  --ifm-color-primary: #FACC15;
+  --ifm-color-primary-dark: #EAB308;
+  --ifm-color-primary-darker: #CA8A04;
+  --ifm-color-primary-darkest: #A16207;
+  --ifm-color-primary-light: #FBBF24;
+  --ifm-color-primary-lighter: #FCD34D;
+  --ifm-color-primary-lightest: #FEF08A;
   
   --ifm-background-color: var(--color-background);
   --ifm-background-surface-color: var(--color-surface);
   
   --ifm-navbar-background-color: rgba(10, 10, 10, 0.85);
   
-  --docusaurus-highlighted-code-line-bg: rgba(59, 130, 246, 0.15);
+  --docusaurus-highlighted-code-line-bg: rgba(250, 204, 21, 0.15);
 }
 
 /* ================================
