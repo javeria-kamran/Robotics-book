@@ -1,20 +1,25 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 // API Configuration - use localhost for development
+let API_URL = '';
+
 function getApiUrl(): string {
+  if (API_URL) return API_URL; // Return cached value
+  
   if (typeof window === 'undefined') {
     return 'https://robotics-book-production-8e3d.up.railway.app';
   }
   
   if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    return 'http://localhost:8000';
+    API_URL = 'http://localhost:8000';
+  } else {
+    // For production, use the Railway backend
+    API_URL = 'https://robotics-book-production-8e3d.up.railway.app';
   }
   
-  // For production, use the Railway backend
-  return 'https://robotics-book-production-8e3d.up.railway.app';
+  return API_URL;
 }
 
-const API_URL = getApiUrl();
 
 interface User {
   id: number;
@@ -56,7 +61,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Load token from localStorage on mount
   useEffect(() => {
-    console.log('AuthContext: Initializing, API_URL:', API_URL);
+    console.log('AuthContext: Initializing, API_URL:', getApiUrl());
     
     const storedToken = localStorage.getItem('auth_token');
     if (storedToken) {
@@ -71,8 +76,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const fetchUser = async (authToken: string) => {
     try {
-      console.log('AuthContext: Fetching user from', `${API_URL}/auth/me`);
-      const response = await fetch(`${API_URL}/auth/me`, {
+      const url = `${getApiUrl()}/auth/me`;
+      console.log('AuthContext: Fetching user from', url);
+      const response = await fetch(url, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
         },
@@ -97,7 +103,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signIn = async (email: string, password: string) => {
     try {
-      const response = await fetch(`${API_URL}/auth/signin`, {
+      const response = await fetch(`${getApiUrl()}/auth/signin`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -122,7 +128,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signUp = async (data: SignUpData) => {
     try {
-      const response = await fetch(`${API_URL}/auth/signup`, {
+      const response = await fetch(`${getApiUrl()}/auth/signup`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -148,7 +154,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const signOut = async () => {
     try {
       if (token) {
-        await fetch(`${API_URL}/auth/signout`, {
+        await fetch(`${getApiUrl()}/auth/signout`, {
           method: 'POST',
           headers: {
             'Authorization': `Bearer ${token}`,
@@ -185,4 +191,4 @@ export function useAuth() {
   return context;
 }
 
-export { API_URL };
+export { getApiUrl };
