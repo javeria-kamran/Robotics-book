@@ -3,7 +3,7 @@ import React, { createContext, useContext, useState, useEffect, ReactNode } from
 // API Configuration - use localhost for development
 const API_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost' 
   ? 'http://localhost:8000'
-  : process.env.BACKEND_URL;
+  : (process.env.REACT_APP_BACKEND_URL || process.env.BACKEND_URL || 'https://api.how-to-make-humanoid-robot.vercel.app');
 
 interface User {
   id: number;
@@ -51,6 +51,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       fetchUser(storedToken);
     } else {
       setLoading(false);
+    }
+    
+    // Log API URL for debugging (only in dev or if there's an issue)
+    if (typeof window !== 'undefined' && !API_URL?.includes('localhost')) {
+      console.log('Backend API URL:', API_URL);
     }
   }, []);
 
