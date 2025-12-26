@@ -1,9 +1,20 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 // API Configuration - use localhost for development
-const API_URL = typeof window !== 'undefined' && window.location.hostname === 'localhost' 
-  ? 'http://localhost:8000'
-  : (process.env.REACT_APP_BACKEND_URL || process.env.BACKEND_URL || 'https://api.how-to-make-humanoid-robot.vercel.app');
+function getApiUrl(): string {
+  if (typeof window === 'undefined') {
+    return 'https://robotics-book-production-8e3d.up.railway.app';
+  }
+  
+  if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+    return 'http://localhost:8000';
+  }
+  
+  // For production, use the Railway backend
+  return 'https://robotics-book-production-8e3d.up.railway.app';
+}
+
+const API_URL = getApiUrl();
 
 interface User {
   id: number;
@@ -45,22 +56,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   // Load token from localStorage on mount
   useEffect(() => {
+    console.log('AuthContext: Initializing, API_URL:', API_URL);
+    
     const storedToken = localStorage.getItem('auth_token');
     if (storedToken) {
+      console.log('AuthContext: Found stored token, fetching user');
       setToken(storedToken);
       fetchUser(storedToken);
     } else {
+      console.log('AuthContext: No stored token, skipping user fetch');
       setLoading(false);
-    }
-    
-    // Log API URL for debugging (only in dev or if there's an issue)
-    if (typeof window !== 'undefined' && !API_URL?.includes('localhost')) {
-      console.log('Backend API URL:', API_URL);
     }
   }, []);
 
   const fetchUser = async (authToken: string) => {
     try {
+      console.log('AuthContext: Fetching user from', `${API_URL}/auth/me`);
       const response = await fetch(`${API_URL}/auth/me`, {
         headers: {
           'Authorization': `Bearer ${authToken}`,
@@ -69,14 +80,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
       if (response.ok) {
         const userData = await response.json();
+        console.log('AuthContext: User fetched successfully:', userData.email);
         setUser(userData);
       } else {
+        console.warn('AuthContext: User fetch returned status', response.status);
         // Token invalid, clear it
         localStorage.removeItem('auth_token');
         setToken(null);
       }
     } catch (error) {
-      console.error('Failed to fetch user:', error);
+      console.error('AuthContext: Failed to fetch user:', error);
     } finally {
       setLoading(false);
     }
